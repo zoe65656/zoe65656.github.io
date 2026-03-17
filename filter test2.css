@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* styling of general stuff */
+body{
+    background-color: rgb(243, 245, 245);
+    padding-left: 170px;
+    padding-right: 170px;
+
+  
+}
+
+.top{
+  margin-bottom: 15px;
+  height: 300px;
+  width: auto;
+  background-color: white ;
+  /* background: linear-gradient(to right, #78d5ea 50%, white 40%) no-repeat; */
+    /* background-image: url("https://res.cloudinary.com/dsk2m5x4m/image/upload/v1773610393/header_2_fwk84h.png"); */
+
+}
+
+/* WIP need to put in grid so it moves with screen */
+.header img{
+  position: absolute;
+  width: 500px;
+  bottom: -12px;
+  left: 170px;  
+
+}
+
+/* header */
+.header{
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  grid-template-areas: 
+  "header header"
+  "text text"
+  "nothing button";
+  height:300px;
+    /* background-attachment: fixed; */
+  /* background-size:cover; */
+    /* background-image: url("https://res.cloudinary.com/dsk2m5x4m/image/upload/v1773719745/header2-02_b6kmlw.png"); */
+
+}
+
+
+.header div.htitle{ 
+  font-family: "coolvetica", sans-serif;
+
+  grid-area: text;
+  text-align: center;
+
+}
+
+.header div.headlinks{
+  grid-area: button;
+  text-align: right;
+}
+
+
+.filterDiv {
+  display: none;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 15px;
+}
+
+.leftcol{
+    display: grid;
+    float: left;
+    gap: 35px;
+      padding: 20px;
+    grid-template-rows: 150px auto;
+    position: relative;
+}
+
+
+/* stickers/right col */
+.rightcol{
+  padding-left: 70px;
+  background-image: url("data:image/svg+xml,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20528.24%20216.36%22%3E%3Cdefs%3E%3Cstyle%3E%20%20%20%20%20%20.cls-1%20%7B%20%20%20%20%20%20%20%20fill%3A%20%23fff%3B%20%20%20%20%20%20%7D%20%20%20%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Crect%20class%3D%22cls-1%22%20y%3D%22208.89%22%20width%3D%2210.34%22%20height%3D%227.47%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%2230.44%20216.36%2030.44%20196.25%2010.34%20196.25%2010.34%20203.73%200%20203.73%200%20165.61%2010.53%20165.61%2010.34%20173.09%2030.44%20172.6%2030.44%20152.98%2010.85%20152.98%2010.66%20160.46%200%20160.46%200%20122.34%2010.34%20122.34%2010.34%20129.82%2030.44%20129.82%2030.44%20109.71%2010.34%20109.71%2010.34%20117.19%200%20117.19%200%2079.07%2010.34%2079.07%2010.34%2086.55%2030.44%2086.55%2029.91%2066.44%2010.34%2066.44%2010.34%2073.92%200%2073.92%200%2035.8%2010.53%2035.8%2010.34%2043.27%2030.44%2042.79%2030.44%2023.17%2010.85%2023.17%2010.66%2030.65%200%2030.65%200%200%20528.24%200%20528.24%20216.36%2030.44%20216.36%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.sticker{   
+  float: left;
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    grid-template-rows: 300px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    gap: 20px;
+
+}
+
+/* images of stickers */
+.filterDiv img{
+  width: 100%;
+  height: 100%;
+    object-fit: contain;
+  	transition:  0.30s cubic-bezier(0.33, 1, 0.68, 1);
+
+
+}
+
+.filterDiv img:hover{
+    scale: 200%;
+}
+
+.show {
+  display: block;
+}
+
+
+/* Style the buttons */
+
+#myBtnContainer{
+  height: auto;
+}
+
+.btn {
+  padding: 3px 10px;
+  width: 150px;
+  margin: 6px; 
+  box-shadow: 2px 2px #666;
+  cursor: pointer;
+  background: linear-gradient(to bottom, white 10%, #78d5ea 100%);
+}
+
+.btn:hover {
+  color: #5e5f5f;
+}
+
+.btn.active {
+  background: linear-gradient(to bottom, white 10%, #9cffff 100%);
+  color: #5e5f5f;
+}
+
+
+/* sticker desc left col */
+.stickerdesc{
+  position: absolute;
+  top: 525px;
+  display: grid;
+  grid-template-rows: repeat(4 auto);
+  gap: 10px;
+
+}
+
+/* if you address by filterDiv the filter will not work properly O_O */
+.stickerdesc div{
+  width: 100%;
+  height: auto;
+  background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+ 
+  
+}
+
+
+/* text styles */
+h1{
+  font-family: "coolvetica", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+}
+
+h2{
+  font-family: "coolvetica", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #78d5ea;
+}
+
+p2{
+  font-family: "coolvetica", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+button{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+
+/* adjust size of screen  */
+@media (max-width: 1100px){
+  .sticker {
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 5px;
+  }
+  .rightcol{
+    padding-left: 50px;
+  }
+  body{
+    padding-left: 60px;
+    padding-right:60px;
+
+  }
+  .row{
+    gap: 8px;
+  }
+  .header{
+    margin-bottom: 8px;
+    height: 275px;
+  }
+  .btn{
+    width: 125px;
+  }
+  .row{
+    grid-template-columns: 25% 1fr;
+  }
+}
+
+/* tablet */
+@media (max-width: 835px){
+  .sticker {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .header{
+    height: 250px;
+  }
+  .leftcol{
+    grid-template-rows: 160px auto;
+  }
+  .header img{
+    width: 480px;
+    top: -25px; 
+    left: 32px;
+  }
+}
+
+/* phone */
+@media (max-width: 400px){
+  body{
+    padding-left:5px;
+    padding-right: 5px;
+
+  }
+
+  .header{
+    h1{
+      font-size: 55px;
+    }
+  }
+
+  .row{
+    grid-template-columns: 1fr;
+  }
+
+  .rightcol{
+    padding-left: 35px;
+  }
+
+  .leftcol{
+    grid-template-rows: auto 1fr 1fr;
+    gap: 8px;
+    padding: 5px;
+
+  }
+  p2{
+    display:none;
+  }
+
+  #myBtnContainer{
+    height:55px;
+  }
+  
+  .stickerdesc{
+    display: none;
+  }
+
+  .btn{
+    height: 50px;
+    width: auto;  
+    margin:2px;
+    
+  }
+
+  .header img{
+    width: 340px;
+    bottom: 45px;
+    left: -35px;
+  }
+
+}
