@@ -14,8 +14,54 @@ body{
     background-color: rgb(243, 245, 245);
     padding-left: 160px;
     padding-right: 160px;
-  
+  background-image: url("https://res.cloudinary.com/dsk2m5x4m/image/upload/q_auto/f_auto/v1776191631/bg-why_jgpefl.gif");
 }
+
+
+.button{
+  display: grid;
+  z-index: 5;
+}
+
+
+.button svg{
+    font-size: 35px;
+    margin-top: -10px;
+    height: 19%;
+    position: absolute;
+
+    top: 35px;
+    z-index: 3;
+    
+    transition:  0.30s cubic-bezier(0.33, 1, 0.68, 1);
+    filter: drop-shadow(1px 2px 2px #5e5f5f);
+    
+}
+
+.button svg:hover{
+  filter: drop-shadow(5px 8px 2px #5e5f5f);
+  scale: 110%;
+
+}
+
+
+
+
+
+h1{
+  z-index: 2;
+  padding-left: 138px;
+  rotate: -2deg;
+  margin-top: 60px;
+  margin-bottom: 0px;
+
+  color:#78d5ea;
+  -webkit-text-stroke: 50px #fafeff;
+  paint-order: stroke fill;
+  filter: drop-shadow(1px 2px 2px #5e5f5f);
+
+}
+
 
 .row{
     background-image: url("data:image/svg+xml,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20528.24%20216.36%22%3E%3Cdefs%3E%3Cstyle%3E%20%20%20%20%20%20.cls-1%20%7B%20%20%20%20%20%20%20%20fill%3A%20%23fff%3B%20%20%20%20%20%20%7D%20%20%20%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Crect%20class%3D%22cls-1%22%20y%3D%22208.89%22%20width%3D%2210.34%22%20height%3D%227.47%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%2230.44%20216.36%2030.44%20196.25%2010.34%20196.25%2010.34%20203.73%200%20203.73%200%20165.61%2010.53%20165.61%2010.34%20173.09%2030.44%20172.6%2030.44%20152.98%2010.85%20152.98%2010.66%20160.46%200%20160.46%200%20122.34%2010.34%20122.34%2010.34%20129.82%2030.44%20129.82%2030.44%20109.71%2010.34%20109.71%2010.34%20117.19%200%20117.19%200%2079.07%2010.34%2079.07%2010.34%2086.55%2030.44%2086.55%2029.91%2066.44%2010.34%2066.44%2010.34%2073.92%200%2073.92%200%2035.8%2010.53%2035.8%2010.34%2043.27%2030.44%2042.79%2030.44%2023.17%2010.85%2023.17%2010.66%2030.65%200%2030.65%200%200%20528.24%200%20528.24%20216.36%2030.44%20216.36%22%2F%3E%3C%2Fsvg%3E");
@@ -24,7 +70,7 @@ body{
     display: grid;
     /* grid-template-columns: 80% 1fr; */
     gap: 15px;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 250px;
     position: relative;
 
 }
@@ -37,15 +83,63 @@ body{
     /* ^^^ gap from punch holes  in bg */
 }
 
-.writing img{
-  width: 45%;
 
+
+/* note1 */
+.note1{
+    background: linear-gradient(to bottom, rgb(221, 253, 231) 20%, rgb(135, 240, 123) 100%);
+    display: grid;
+    width: 100%;
+    height: 400px;
+    filter: drop-shadow(5px 10px 3px #a1bec4);
+    position: absolute;
+    left: -20px;
+    top: 175px; 
+    width: 400px;
+} 
+
+.note1cont{
+    height: 60%;
+    margin: 20px;
+    background-color: aliceblue;
 }
+
+.note1cont img{
+    object-fit: cover;
+    width: 100%;
+    height:100%;
+}
+
+/* note2 */
+.note2{
+    background: linear-gradient(to bottom, rgb(231, 253, 221) 20%, rgb(123, 240, 144) 100%);
+    display: grid;
+    width: 100%;
+    height: 400px;
+    filter: drop-shadow(5px 10px 3px #a1bec4);
+    position: absolute;
+    top: 220px;
+    left: 410px;
+    width: 300px;
+}
+
+.note2cont{
+    height: 55%;
+    margin: 20px;
+}
+
+.note2cont img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 h1{
   font-family: "coolvetica", sans-serif;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 100px;
 }
 
 h2{
