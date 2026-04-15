@@ -31,12 +31,31 @@ body{
 .header{
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 45% auto auto;
+  grid-template-columns: 45% 48% auto;
+  grid-template-rows: 63px;
   padding: 10px;  
   background: linear-gradient(180deg, #ffffff 35%, #abdbe6 120%);
 box-shadow: inset 0px -8px 20px 5px #ffffff;
   filter: drop-shadow(-1px 2px 2px #5e5f5f);
 
+}
+
+.about{
+      transition:  0.20s cubic-bezier(0.33, 1, 0.68, 1);
+
+}
+
+.about svg{
+  height: 100%;
+  padding-left:8px;
+  font-size: 55px;
+  filter: drop-shadow(1px 2px 2px #5e5f5f);
+}
+
+
+.about:hover{
+  filter: drop-shadow(3px 4px 2px #5e5f5f);
+  scale: 105%;
 
 }
 
@@ -50,6 +69,8 @@ box-shadow: inset 0px -8px 20px 5px #ffffff;
 }
 
 .hsticker:hover{
+    filter: drop-shadow(3px 4px 2px #5e5f5f);
+
   scale: 110%;
 }
 
@@ -72,6 +93,8 @@ box-shadow: inset 0px -8px 20px 5px #ffffff;
 }
 
 .pgbuttons svg{
+  display: block;
+  margin: auto;
   height: 100%;
   scale: 70%;
   transition:  0.30s cubic-bezier(0.33, 1, 0.68, 1);
@@ -145,7 +168,7 @@ box-shadow: inset 0px -8px 20px 5px #ffffff;
 .sticker{   
   float: left;
     display: grid; 
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, auto);
     width: 100%;
     grid-template-rows: 300px;
     padding-top: 20px;
@@ -264,7 +287,11 @@ button{
   font-size: 15px;
 }
 
-
+@media (max-width: 1400px){
+  .stickerdesc{
+    top: 420px;
+  }
+}
 /* adjust size of screen  */
 @media (max-width: 1100px){
   .sticker {
@@ -274,6 +301,11 @@ button{
   .rightcol{
     padding-left: 50px;
   }
+
+  .stickerdesc{
+    top: 400px;
+  }
+
   body{
     padding-left: 60px;
     padding-right:60px;
@@ -284,15 +316,42 @@ button{
   }
   .header{
     margin-bottom: 8px;
-    height: 275px;
   }
-  .btn{
-    width: 125px;
+    .btn{
+    width: 100%;
   }
   .row{
     grid-template-columns: 25% 1fr;
   }
 }
+
+@media (max-width: 835px){
+    .hsticker svg{
+
+    position: absolute;
+    left:140px; 
+    top: 28px;
+  }
+}
+
+@media (max-width: 720px){
+    .hsticker svg{
+
+    position: absolute;
+    left:90px; 
+    top: 28px;
+  }
+}
+
+@media (max-width: 620px){
+    .hsticker svg{
+
+    position: absolute;
+    left:45px; 
+    top: 25px;
+  }
+}
+
 
 /* tablet */
 @media (max-width: 835px){
@@ -300,24 +359,49 @@ button{
     grid-template-columns: repeat(3, 1fr);
   }
   body{
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   .header{
-    height: 250px;
+    grid-template-columns: 100%;
+    height: 100%;
   }
+
+  .intro{
+    margin-bottom: 10px;
+    padding-right: 100px;
+    margin-top: 10px;
+  }
+
+  .about{
+    position: absolute;
+    right: 5px;
+    bottom:5px;
+    width:15%;
+    margin: auto;
+  }
+
+   .pgbuttons svg{
+    width:90%;
+    scale:92%
+
+  }
+
+
+    .htitle{
+    font-size: 60px;
+    margin: auto;
+  }
+
   .leftcol{
     grid-template-rows: 160px auto;
   }
-  .header img{
-    width: 480px;
-    top: -25px; 
-    left: 32px;
-  }
+
 }
 
+
 /* phone */
-@media (max-width: 400px){
+@media (max-width: 420px){
   body{
     padding-left:5px;
     padding-right: 5px;
@@ -325,9 +409,46 @@ button{
   }
 
   .header{
-    h1{
-      font-size: 55px;
-    }
+    grid-template-columns: 100%;
+
+  }
+
+  .htitle{
+    font-size: 43px;
+    margin: auto;
+  }
+
+  .hsticker svg{
+    scale: 80%;
+    position: absolute;
+    left:-27px; 
+    top:13px
+  }
+
+  .about{
+    width:30%;
+    margin: auto;
+  }
+
+  .pgbuttons{
+        grid-template-columns: auto auto;
+        grid-template-rows: 90px 90px;
+
+  }
+
+  .pgbuttons svg{
+    width:100%;
+    scale:92%
+
+  }
+
+  .pgbuttons svg:hover{
+  filter: drop-shadow(5px 8px 2px #5e5f5f);
+  scale: 100%;
+
+}
+  .pgbuttons text{
+    font-size: 35px;
   }
 
   .row{
@@ -344,8 +465,22 @@ button{
     padding: 5px;
 
   }
-  p2{
+
+  .rightcol{
+    position: absolute;
+    top:670px;
+  }
+
+  .sticker {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .buttons2 p2{
     display:none;
+  }
+
+  .buttons2 br{
+    display: none;
   }
 
   #myBtnContainer{
@@ -371,17 +506,3 @@ button{
 
 }
 
-/* 
-.sparkle{
-  perspective: 1px;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: absolute;
-    top:0;
-  left:0;
-  right: 0;
-  bottom: 0;
-background-image: url("https://res.cloudinary.com/dsk2m5x4m/image/upload/q_auto/f_auto/v1775180345/bg_particle_c8fcmc.png");
-  transform: translateZ(-1px);
-} */
